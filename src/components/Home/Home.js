@@ -1,12 +1,37 @@
 import React from "react";
 import "./Home.css";
+import TvImage from "../../images/tv.jpeg";
 
 const Home = () => {
   return (
     <div>
       <main>
-        <h1>Delta Elcetronic</h1>
-        <h3>cheap for you and better for environment</h3>
+        <section className="flex  px-16 mt-16">
+          <div className="grow w-64">
+            <h1 className="text-5xl font-bold text-orange-600 font-serif">
+              Delta Elcetronics
+            </h1>
+            <h3 className="text-3xl font-semibold text-green-600 font-serif">
+              - Cheap for you and better for environment
+            </h3>
+            <p className="text-slate-600 mt-4">
+              Delta Electronics, Inc. today announced its consolidated sales
+              revenues for February 2022 totaled NT$25,620 million, representing
+              a 26 percent increase as compared to NT$20,344 million for
+              February 2021 and a 2 percent decrease as compared to NT$26,270
+              million for January 2022. The Company's cumulative consolidated
+              sales revenues from January to February in 2022 were NT$51,890
+              million, a 14 percent increase as compared to NT$45,459 million
+              for the same period in 2021.
+            </p>
+            <button className="p-3 mt-3 text-white rounded bg-orange-600">
+              Live Demo
+            </button>
+          </div>
+          <div className="grow w-32">
+            <img className="h-64 ml-16" src={TvImage} alt="" />
+          </div>
+        </section>
       </main>
     </div>
   );
