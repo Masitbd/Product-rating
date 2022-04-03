@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div>
       <main>
-        <section className="flex  px-16 mt-16">
+        <section className="flex flex-col md:flex-row  px-16 mt-16">
           <div className="grow w-64">
             <h1 className="text-5xl font-bold text-orange-600 font-serif">
               Delta Elcetronics
@@ -29,7 +29,7 @@ const Home = () => {
             </button>
           </div>
           <div className="grow w-32">
-            <img className="h-64 ml-16" src={TvImage} alt="" />
+            <img className="h-64 ml-16 mt-5 " src={TvImage} alt="" />
           </div>
         </section>
       </main>
