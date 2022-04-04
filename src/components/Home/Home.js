@@ -3,6 +3,7 @@ import "./Home.css";
 import TvImage from "../../images/tv.jpeg";
 import Reviews from "../Reviews/Reviews";
 import useReviews from "../../hooks/useReviews";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   const [reviews, setReviews] = useReviews();
@@ -49,9 +50,11 @@ const Home = () => {
             })}
           </div>
         </section>
-        <button className="p-3 my-3 mx-16 text-white rounded bg-orange-600">
-          See all reviews
-        </button>
+        <Link to="/reviews">
+          <button className="p-3 my-3 mx-16 text-white rounded bg-blue-600">
+            See all reviews
+          </button>
+        </Link>
       </main>
     </div>
   );
