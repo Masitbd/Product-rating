@@ -1,8 +1,11 @@
 import React from "react";
 import "./Home.css";
 import TvImage from "../../images/tv.jpeg";
+import Reviews from "../Reviews/Reviews";
+import useReviews from "../../hooks/useReviews";
 
 const Home = () => {
+  const [reviews, setReviews] = useReviews();
   return (
     <div>
       <main>
@@ -24,7 +27,7 @@ const Home = () => {
               million, a 14 percent increase as compared to NT$45,459 million
               for the same period in 2021.
             </p>
-            <button className="p-3 mt-3 text-white rounded bg-orange-600">
+            <button className="p-3 my-3 text-white rounded bg-orange-600">
               Live Demo
             </button>
           </div>
@@ -32,6 +35,23 @@ const Home = () => {
             <img className="h-64 ml-16 mt-5 " src={TvImage} alt="" />
           </div>
         </section>
+        <section className="px-16">
+          <h3>Customer reviews(3)</h3>
+          <div className="flex gap-16">
+            {reviews.slice(0, 3).map((review) => {
+              return (
+                <div className="max-w-sm rounded overflow-hidden shadow-lg">
+                  <p>{review._id}</p>
+                  <p>{review.text}</p>
+                  <p>{review.rating}</p>
+                </div>
+              );
+            })}
+          </div>
+        </section>
+        <button className="p-3 my-3 mx-16 text-white rounded bg-orange-600">
+          See all reviews
+        </button>
       </main>
     </div>
   );
