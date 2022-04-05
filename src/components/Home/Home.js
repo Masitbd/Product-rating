@@ -4,6 +4,7 @@ import TvImage from "../../images/tv.jpeg";
 import Reviews from "../Reviews/Reviews";
 import useReviews from "../../hooks/useReviews";
 import { Link } from "react-router-dom";
+import { FcRating } from "react-icons/fc";
 
 const Home = () => {
   const [reviews, setReviews] = useReviews();
@@ -43,7 +44,7 @@ const Home = () => {
           <div className="grid grid-cols-3">
             {reviews.slice(0, 3).map((review) => {
               return (
-                <div className="max-w-sm rounded  shadow-lg  py-2">
+                <div className="max-w-sm rounded  shadow-xl  py-2">
                   <img
                     className={"mx-auto rounded w-24"}
                     src={review.picture}
@@ -51,7 +52,33 @@ const Home = () => {
                   />
                   <p className="ml-3">Name: {review.author}</p>
                   <p className="ml-3">Comments: {review.text}</p>
-                  <p className="ml-3">Rating: {review.rating}</p>
+                  {review.rating === 3 && (
+                    <p className="flex justify-center items-center">
+                      Rating:
+                      <FcRating />
+                      <FcRating />
+                      <FcRating />
+                    </p>
+                  )}
+                  {review.rating === 4 && (
+                    <p className="flex justify-center items-center">
+                      Rating:
+                      <FcRating />
+                      <FcRating />
+                      <FcRating />
+                      <FcRating />
+                    </p>
+                  )}
+                  {review.rating === 5 && (
+                    <p className="flex justify-center items-center">
+                      Rating:
+                      <FcRating />
+                      <FcRating />
+                      <FcRating />
+                      <FcRating />
+                      <FcRating />
+                    </p>
+                  )}
                 </div>
               );
             })}
