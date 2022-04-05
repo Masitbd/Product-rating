@@ -11,7 +11,13 @@ const Reviews = () => {
       {reviews.map((review) => {
         return (
           <div className="max-w-sm rounded overflow-hidden shadow-lg">
-            <p>{review._id}</p>
+            <p className="">
+              <img
+                className="mx-auto rounded w-24"
+                src={review.picture}
+                alt=""
+              />
+            </p>
             <p>{review.text}</p>
             <p>{review.rating}</p>
             {review.rating === 1 && <p>*</p>}
