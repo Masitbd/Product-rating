@@ -41,7 +41,7 @@ const Home = () => {
           <h3 className="text-center my-8 font-semibold text-3xl text-blue-600">
             Customer reviews(3)
           </h3>
-          <div className="grid grid-cols-3">
+          <div className="grid grid-cols-1 md:grid-cols-3">
             {reviews.slice(0, 3).map((review) => {
               return (
                 <div className="max-w-sm rounded  shadow-xl  py-2">

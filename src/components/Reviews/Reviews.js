@@ -11,7 +11,7 @@ const Reviews = () => {
       <h3 className="text-center my-8 font-semibold text-3xl text-blue-600">
         See All Customer Review's
       </h3>
-      <div className="grid  grid-cols-3 gap-12 mt-8 mx-16">
+      <div className="grid  grid-cols-1 md:grid-cols-3 gap-12 mt-8 mx-16">
         {reviews.map((review) => {
           return (
             <div className="max-w-sm rounded overflow-hidden shadow-lg">
