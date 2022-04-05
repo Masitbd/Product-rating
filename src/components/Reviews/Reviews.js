@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect } from "react";
 import useReviews from "../../hooks/useReviews";
 import { FcRating } from "react-icons/fc";
 import "./Reviews.css";
