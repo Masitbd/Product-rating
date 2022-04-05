@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div>
       <main>
-        <section className="flex flex-col md:flex-row  px-16 mt-16">
+        <section className="flex flex-col md:flex-row  px-16 mt-10">
           <div className="grow w-64">
             <h1 className="text-5xl font-bold text-orange-600 font-serif">
               Delta Elcetronics
@@ -37,21 +37,28 @@ const Home = () => {
           </div>
         </section>
         <section className="px-16">
-          <h3>Customer reviews(3)</h3>
-          <div className="flex gap-16">
+          <h3 className="text-center my-8 font-semibold text-3xl text-blue-600">
+            Customer reviews(3)
+          </h3>
+          <div className="grid grid-cols-3">
             {reviews.slice(0, 3).map((review) => {
               return (
-                <div className="max-w-sm rounded overflow-hidden shadow-lg">
-                  <p>{review._id}</p>
-                  <p>{review.text}</p>
-                  <p>{review.rating}</p>
+                <div className="max-w-sm rounded  shadow-lg  py-2">
+                  <img
+                    className={"mx-auto rounded w-24"}
+                    src={review.picture}
+                    alt=""
+                  />
+                  <p className="ml-3">Name: {review.author}</p>
+                  <p className="ml-3">Comments: {review.text}</p>
+                  <p className="ml-3">Rating: {review.rating}</p>
                 </div>
               );
             })}
           </div>
         </section>
         <Link to="/reviews">
-          <button className="p-3 my-3 mx-16 text-white rounded bg-blue-600">
+          <button className="p-3 my-4 mx-16 text-white rounded bg-blue-600">
             See all reviews
           </button>
         </Link>
